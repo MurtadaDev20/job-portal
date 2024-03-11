@@ -28,7 +28,10 @@ Route::post('/apply-job',[JobsController::class,'applyJob'])->name('applyJob');
 Route::post('/save-job',[JobsController::class,'saveJob'])->name('saveJob');
 
 
-
+Route::get('/forgot-password',[AccountController::class,'forgotPassword'])->name('account.forgotPassword');
+Route::post('/process-forgot-password',[AccountController::class,'processForgotPassword'])->name('account.processForgotPassword');
+Route::get('/reset-password/{token}',[AccountController::class,'resetPassword'])->name('account.resetPassword');
+Route::post('/process-reset-password',[AccountController::class,'processResetPassword'])->name('account.processResetPassword');
 
 
 
